@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     dir('nodejs-npm') {
-                        security_scan coverity_waitForScan: true, product: 'coverity'
+                        security_scan coverity_waitForScan: true, coverity_policy_view: 'Outstanding Issues', product: 'coverity'
 
                         
                     }
